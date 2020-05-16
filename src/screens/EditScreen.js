@@ -9,7 +9,7 @@ const EditScreen = ({ navigation }) => {
   const blogPost = state.find(blogPost => blogPost.id === id)
 
   const onSubmit = (title, content) => {
-    editBlogPost({ id, title, content }).then(() => navigation.pop())
+    editBlogPost(id, title, content).then(() => navigation.pop())
   }
 
   return (
