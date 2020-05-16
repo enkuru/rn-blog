@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons'
 const ShowScreen = ({ navigation }) => {
   const { state } = useContext(Context)
   const id = navigation.getParam('id')
-  const blogPost = state.find(({ id }) => id === id)
+  const blogPost = state.find(blogPost => blogPost.id === id)
 
   return (
     <View style={styles.container}>
